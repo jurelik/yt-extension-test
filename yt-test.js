@@ -5,11 +5,7 @@ myDiv.style.width = '40px';
 myDiv.style.border = '2px solid black';
 
 myDiv.addEventListener('click', () => {
-  chrome.tabs.create({
-    url: 'http://localhost:3000'
-  }).then(() => {
-    console.log('suuuh');
-  }, onError)
+  chrome.runtime.sendMessage({});
 })
 
 let loadCheck = function() {
